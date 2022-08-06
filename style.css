@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0.4rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.description {
+    color: #909090;
+    text-align: center;
+    font-style: italic;
+}
+
+.gold {
+    color: #FFD700;
+}
+
+#flower {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    margin: 0 auto;
+}
+#flower::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    background-color: #855407;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.calyx {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 3.5vw);
+    width: 50%;
+    background-image: linear-gradient(#FFD700 50%, #f0cc00 50%);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.5);
+    height: 7vw;
+    transform-origin: right;
+    border-radius: 50% 0 0 50%;
+}
+
+#input-control {
+    position: relative;
+    width: 40vw;
+    margin: 3rem auto;
+}
+#calyxes-block {
+    display: flex;
+    justify-content: space-between;
+}
+#input-control label {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#calyxes {
+    width: calc(100% - 7rem);
+    border: 1px solid #D3D3D3;
+    border-radius: unset;
+    outline: none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.square-button {
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    background-color: #CC8800;
+    color: #FFF;
+}
+.square-button:active {
+    background-color: #855407;
+}
