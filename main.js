@@ -3,33 +3,33 @@ const PHI_ANGLE = 360 / (PHI + 1);
 
 let rotationDegree = PHI_ANGLE;
 
-const increaseButton = document.getElementById('increase-calyxes');
-const decreaseButton = document.getElementById('decrease-calyxes');
-const calyxesInput = document.getElementById('calyxes');
+const increaseButton = document.getElementById('increase-petals');
+const decreaseButton = document.getElementById('decrease-petals');
+const petalsInput = document.getElementById('petals');
 const flower = document.getElementById('flower');
 
-calyxesInput.addEventListener('change', renderCalyxes);
+petalsInput.addEventListener('change', renderCalyxes);
 
 increaseButton.addEventListener('click', function() {
-    calyxesInput.value = parseInt(calyxesInput.value) + 1;
+    petalsInput.value = parseInt(petalsInput.value) + 1;
     renderCalyxes();
 });
 
 decreaseButton.addEventListener('click', function() {
-    calyxesInput.value = parseInt(calyxesInput.value) - 1;
+    petalsInput.value = parseInt(petalsInput.value) - 1;
     renderCalyxes();
 });
 
 function renderCalyxes() {
-    let calyxes = parseInt(calyxesInput.value);
+    let petals = parseInt(petalsInput.value);
     rotationDegree = PHI_ANGLE;
     flower.innerHTML = '';
 
-    for (let i = 0; i < calyxes; i++) {
-        const calyx = document.createElement('div');
-        calyx.classList.add('calyx');
-        calyx.style.transform = 'rotate(' + rotationDegree + 'deg)';
-        flower.appendChild(calyx);
+    for (let i = 0; i < petals; i++) {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+        petal.style.transform = 'rotate(' + rotationDegree + 'deg)';
+        flower.appendChild(petal);
         rotationDegree += PHI_ANGLE;
     }
 }
