@@ -16,7 +16,7 @@ increaseButton.addEventListener('click', function() {
 });
 
 decreaseButton.addEventListener('click', function() {
-    calyxesInput.value = parseInt(calyxesInput.value) + 1;
+    calyxesInput.value = parseInt(calyxesInput.value) - 1;
     renderCalyxes();
 });
 
