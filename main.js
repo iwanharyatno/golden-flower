@@ -8,19 +8,19 @@ const decreaseButton = document.getElementById('decrease-petals');
 const petalsInput = document.getElementById('petals');
 const flower = document.getElementById('flower');
 
-petalsInput.addEventListener('change', renderCalyxes);
+petalsInput.addEventListener('change', renderPetals);
 
 increaseButton.addEventListener('click', function() {
     petalsInput.value = parseInt(petalsInput.value) + 1;
-    renderCalyxes();
+    renderPetals();
 });
 
 decreaseButton.addEventListener('click', function() {
     petalsInput.value = parseInt(petalsInput.value) - 1;
-    renderCalyxes();
+    renderPetals();
 });
 
-function renderCalyxes() {
+function renderPetals() {
     let petals = parseInt(petalsInput.value);
     rotationDegree = PHI_ANGLE;
     flower.innerHTML = '';
@@ -34,4 +34,4 @@ function renderCalyxes() {
     }
 }
 
-renderCalyxes();
+renderPetals();
